@@ -7,12 +7,32 @@ public class Address {
     private String zipCode;
     private String country = "USA";
 
+    //constructor - automaticlly called
+    public Address() {
+        System.out.println("Address constructor");
+        street = "123 unknown street";
+        city = "Unknown";
+        state = "Unknown";
+        zipCode = "00000";
+    }
+    public Address(String street,String city, String zipCode, String state) {
+        this.zipCode = zipCode;
+        this.state = state;
+        this.street = street;
+        this.city = city;
+        setStreet(street);//reuse setter methode
+    }
+
     public String getStreet() {
         return street;
     }
 
     public void setStreet(String street) {
-        this.street = street;
+        if (street.isEmpty()||street.length()>50) {
+            System.out.println("Error");
+        } else {
+            this.street = street;
+        }
     }
 
     public String getCity() {

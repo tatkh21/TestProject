@@ -3,6 +3,7 @@ package day46_incasulassion;
 public class Dealership {
     public static void main(String[] args) {
         Car car1 = new Car();
+        System.out.println(car1.toString());
         car1.setModel("Nissan Altima");
         System.out.println("car1model = " + car1.getModel());
 

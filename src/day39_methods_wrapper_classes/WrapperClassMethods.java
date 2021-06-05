@@ -1,7 +1,5 @@
 package day39_methods_wrapper_classes;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 public class WrapperClassMethods {
     public static void main(String[] args) {
         System.out.println(Integer.max(10,5));

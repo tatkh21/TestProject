@@ -48,6 +48,32 @@ public class WalmartStore {
             totalWorth += (eachItem.price * eachItem.quantity);
         }
     }
+    public void restockInventory(ArrayList<Item> newItems) {
+        ArrayList<Item> newItemsToAdd = new ArrayList<>();
+
+        for(Item eachNewItem : newItems){
+            boolean isNew = true;
+            for(Item eachInventoryItem : inventory){
+                if(eachNewItem.name.equals(eachInventoryItem.name) && eachNewItem.price == eachInventoryItem.price){
+                    eachInventoryItem.quantity += eachNewItem.quantity;
+                    isNew = false;
+                    break;
+                }
+            }
+            if(isNew) {
+                newItemsToAdd.add(eachNewItem);
+            }
+        }
+
+        inventory.addAll(newItemsToAdd);
+
+        totalWorth = 0;
+        calculateWorth();
+
+    }
+
+
+
 
 
 }

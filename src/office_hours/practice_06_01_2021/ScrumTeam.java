@@ -33,7 +33,44 @@ public class ScrumTeam {
         this.allDevelopers.addAll(Arrays.asList(developers));
     }
 
+    public boolean  removeTester(int employeeId) {
+        for (int i = 0; i < allTester.size(); i++) {
+            if (allTester.get(i).getEmployeeID() == employeeId) {
+                allTester.remove(i);
+                return true;
+
+            }
+        }
+        return false;
+    }
+    public boolean removeDeveloper (int employeeId) {
+        int size = allDevelopers.size();
+        allDevelopers.removeIf(eachDev -> eachDev.getEmployeeId() == employeeId);
+        return  size != allDevelopers.size();
+    }
+
+    @Override
+    public String toString() {
+        return "ScrumTeam{" +
+                "productOwner='" + productOwner + '\'' +
+                ", scrumMaster='" + scrumMaster + '\'' +
+                ", businessAnalyst='" + businessAnalyst + '\'' +
+                ", allTester=" + allTester +
+                ", allDevelopers=" + allDevelopers +
+                ", printNumber=" + printNumber +
+                '}';
+    }
+
     public static void main(String[] args) {
+        ScrumTeam scrumTeam = new ScrumTeam("Ziba", "John", "Fikret");
+        System.out.println(scrumTeam.allTester);
+        Tester tester1 = new Tester("Maxim", 10, "SDET", 1000000);
+        scrumTeam.addTester(tester1);
+        scrumTeam.addTester(new Tester("Anna", 11, "SDET", 10000000));
+        System.out.println(scrumTeam.allTester);
+
+        scrumTeam.addDeveloper(new Developer("Anton", 1, "dev", 10000000));
+        System.out.println(scrumTeam.allDevelopers);
 
     }
 }

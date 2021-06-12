@@ -1,4 +1,4 @@
-package day51_inharitance;
+package day51_inharitance_static_block;
 
 public class Contractor extends Employee {
 //1)let everyone know that you are overriding this method

@@ -1,4 +1,4 @@
-package day51_inharitance;
+package day51_inharitance_static_block;
 
 public class Employee extends Object {
     String jobTitle;

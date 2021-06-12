@@ -1,4 +1,4 @@
-package day50_inheritance;
+package _static_block;
                     //IS-A relationship
 public class Student extends Person {
     int studentID;

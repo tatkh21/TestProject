@@ -1,4 +1,4 @@
-package day50_inheritance.overriding;
+package _static_block.overriding;
 
 public class AnimalObject {
     public static void main(String[] args) {

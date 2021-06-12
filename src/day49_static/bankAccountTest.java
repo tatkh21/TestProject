@@ -7,6 +7,7 @@ public class bankAccountTest {
         husband.showBalance();//500
         husband.spend(100);
         husband.showBalance();
+        System.out.println(MyBankAccount.balance);
         
         
 

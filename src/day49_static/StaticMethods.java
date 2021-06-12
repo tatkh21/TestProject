@@ -14,10 +14,14 @@ public class StaticMethods {
         System.out.println("another static method");
         displayMessage("wooden spoon");
     }
-    //StaticMethod.instanceMethod(); > no
+    //StaticMethod.instanceMethod(); > will not work we need to create an object
     //StaticMethods stm = new StaticMethods();
     //stm.instanceMethod
     public void instanceMethod() {
-        System.out.println();
+            System.out.println("InstanceMethode");
+        System.out.println("num = " + num);
+        System.out.println("count = " + count);
+        displayMessage("hello from instance method");
+
     }
 }

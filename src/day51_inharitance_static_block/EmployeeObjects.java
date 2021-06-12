@@ -1,4 +1,4 @@
-package day51_inharitance;
+package day51_inharitance_static_block;
 
 public class EmployeeObjects {
     public static void main(String[] args) {

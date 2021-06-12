@@ -1,4 +1,4 @@
-package day51_inharitance.super_keyword;
+package day51_inharitance_static_block.super_keyword;
 
 public class LyftRides {
     public static void main(String[] args) {

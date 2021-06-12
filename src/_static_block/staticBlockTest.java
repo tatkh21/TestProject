@@ -1,4 +1,4 @@
-package day50_inheritance;
+package _static_block;
 
 public class staticBlockTest {
     public static void main(String[] args) {

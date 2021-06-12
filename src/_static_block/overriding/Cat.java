@@ -1,4 +1,4 @@
-package day50_inheritance.overriding;
+package _static_block.overriding;
 
 public class Cat extends Animal {
     public void jump() {

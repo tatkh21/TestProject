@@ -20,6 +20,7 @@ public class Person {
     }
     public void work (String job) {
         System.out.println(name + " is working as a " + job);
+        //added comments
 
     }
 }

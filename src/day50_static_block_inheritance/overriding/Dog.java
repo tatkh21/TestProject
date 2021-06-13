@@ -1,4 +1,4 @@
-package _static_block.overriding;
+package day50_static_block_inheritance.overriding;
 
 public class Dog extends Animal {
     public void run() {

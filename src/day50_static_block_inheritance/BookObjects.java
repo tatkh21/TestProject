@@ -1,4 +1,4 @@
-package _static_block;
+package day50_static_block_inheritance;
 
 public class BookObjects {
     public static void main(String[] args) {

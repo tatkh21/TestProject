@@ -1,4 +1,4 @@
-package _static_block;
+package day50_static_block_inheritance;
 
 import java.util.ArrayList;
 import java.util.Arrays;

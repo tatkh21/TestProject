@@ -15,8 +15,8 @@ public class Anagram {
         if (one.length() != two.length()) {
             return false;
         }
-        one = one.toLowerCase();
-        two = two.toLowerCase();
+        one = one.toLowerCase();//listen
+        two = two.toLowerCase();//silent
         int [] count = new int[26];
         // listen -> l + 1, i + 1 , s + 1
         //silent -> s -1, i - 1, ect
@@ -25,7 +25,7 @@ public class Anagram {
         // z -> 25
         for (int i = 0; i < one.length(); i++) {
 
-            char letterFromOne = one.charAt(i);// a ->97 - 97
+            char letterFromOne = one.charAt(i);// a ->97 - 97, b
             char letterFromTwo = two.charAt(i);
 
             count[letterFromOne - 97] = count[letterFromOne - 97] + 1;

@@ -7,7 +7,8 @@ public class ElectricCar {
     private int year;
     private int range;
     private static int count;
-    //all object will share this variabl
+    //all object will share this variable
+    public static final int MAX_RANGE = 400;
 
 
     public ElectricCar(String model, String make, double price, int year, int range) {
@@ -19,7 +20,8 @@ public class ElectricCar {
         count++;
     }
     public final void charge() {
-        System.out.println();
+        System.out.println("Charging the Electric car using plug-in");
+        this.range = MAX_RANGE;
     }
     public static int getCount() {
         return count;
@@ -67,7 +69,7 @@ public class ElectricCar {
     }
 
     public void setMake(String make) {
-        if (!make.isEmpty()) {
+        if (make.isEmpty()) {
             System.out.println("Error: make can not be blanc");
         } else {
         this.make = make;

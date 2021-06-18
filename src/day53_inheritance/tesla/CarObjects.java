@@ -9,7 +9,7 @@ public class CarObjects {
         System.out.println("ec1 model = " + ec1.getModel());
         System.out.println("ec1 price = " + ec1.getPrice());
         System.out.println("ec1 year = " + ec1.getYear());
-        System.out.println("ec1 range + " + ec1.getRange());
+        System.out.println("ec1 range = " + ec1.getRange());
         if (ec1.getPrice() > 1000) {
             System.out.println(ec1.getMake() + " - " + ec1.getModel() + " is out of my budget" );
         } else  {

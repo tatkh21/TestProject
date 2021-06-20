@@ -10,7 +10,7 @@ public class Customer {
         name = "new customer";
         id = -1;
     }
-    //add constructor wher we can assing name and id
+    //add constructor where we can assing name and id
     public  Customer(String name, int id)  {
         System.out.println("a-args constructor");
         this.name = name;//setName(name)

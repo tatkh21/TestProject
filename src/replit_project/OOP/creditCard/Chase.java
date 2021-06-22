@@ -1,6 +1,7 @@
 package replit_project.OOP.creditCard;
 
 public class Chase extends CreditCard {
+
     public Chase() {
     }
     public Chase(long cardnumber, double balance) {

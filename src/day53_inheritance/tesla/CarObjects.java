@@ -37,6 +37,7 @@ public class CarObjects {
         myModelX.drive(10);
         System.out.println("Range remaining = " + myModelX.getRange());
         System.out.println("Total electric cars count = " + ElectricCar.getCount());
+        System.out.println(myModelX.toString());
 
 
 

@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class ArrayListExample {
     public static void main(String[] args) {
        ArrayList<Integer> nums = new ArrayList<>();
+        System.out.println(nums.size());
        nums.add(5);
        nums.add(7);
        nums.add(11);

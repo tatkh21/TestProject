@@ -46,6 +46,7 @@ public class TJMaxx {
      * @return
      */
     public List<Item> getRegularItems() {
+
         return regularItems;
     }
 
@@ -84,10 +85,10 @@ public class TJMaxx {
     public List<String> getAllItemNames() {
         List <String> allItemsNames = new ArrayList<>();
 
-       for (int i = 0; i < regularItemsCount() ; i++) {
+       for (int i = 0; i < regularItems.size() ; i++) {
            allItemsNames.add(regularItems.get(i).getName());
        }
-       for (int j= 0; j< onSaleItemsCount(); j++ ) {
+       for (int j= 0; j< onSaleItems.size(); j++ ) {
            allItemsNames.add(onSaleItems.get(j).getName());
        }
        return allItemsNames;
@@ -100,16 +101,15 @@ public class TJMaxx {
      * @returns 0.0 if product cannot be found with that catalognumber
      */
     public double getItemPrice(int catalogNumber) {
-        for (int i = 0; i < regularItems.size()|| i < onSaleItems.size(); i++) {
-            if (i < regularItems.size()) {
-                if (regularItems.get(i).getCatalogNumber() == catalogNumber) {
-                    return regularItems.get(i).getPrice();
-                }
+        for (int i = 0; i < regularItems.size(); i++) {
+            if ( regularItems.get(i).getCatalogNumber() == catalogNumber) {
+                return regularItems.get(i).getPrice();
             }
-           if (i < onSaleItems.size()) {
-               if (onSaleItems.get(i).getPrice() == catalogNumber) {
-                   return onSaleItems.get(i).getPrice();
-               }
+        }
+
+        for (int i = 0; i < onSaleItems.size(); i++) {
+            if (onSaleItems.get(i).getCatalogNumber() == catalogNumber) {
+                return onSaleItems.get(i).getPrice();
            }
         }
 
@@ -139,19 +139,19 @@ public class TJMaxx {
      * @param catalogNumber
      */
     public void removeItem(int catalogNumber) {
-        for (int i = 0; i < regularItems.size() || i < onSaleItems.size(); i++) {
-            if (i < regularItems.size()) {
-                if (regularItems.get(i).getCatalogNumber() == catalogNumber) {
-                    regularItems.remove(i);
-                }
+
+        for (int i = 0; i < regularItems.size(); i++) {
+            if (regularItems.get(i).getCatalogNumber() == catalogNumber) {
+                regularItems.remove(regularItems.get(i));
             }
-            if (i < onSaleItems.size()) {
-                if (onSaleItems.get(i).getPrice() == catalogNumber) {
-                    onSaleItems.remove(i);
+        }
+        for (int i = 0; i < onSaleItems.size(); i++) {
+            if (onSaleItems.get(i).getCatalogNumber() == catalogNumber) {
+                onSaleItems.remove(regularItems.get(i));
                 }
             }
         }
-    }
+
 
     /**
      * - it accepts a catalog number and finds that item

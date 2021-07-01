@@ -17,19 +17,22 @@ public class combineAl {
         System.out.println(combineAl(arr1, arr2));
     }
     public static ArrayList<Integer> combineAl(ArrayList<Integer> a, ArrayList<Integer> b) {
+
         Collections.sort(a);
         Collections.sort(b);
         ArrayList<Integer> arr3 = new ArrayList<>();
-        for (int i = 0; i < a.size() || i < b.size(); i++) {
-            if (i < a.size()) {
-                arr3.add(a.get(i));
-            }
-            if (i < b.size()) {
-                arr3.add(i + 1, b.get(i));
-            }
+        arr3.addAll(a);
+        arr3.addAll(b);
 
-            System.out.println(arr3);
-        }
+//        for (int i = 0; i < a.size(); i++) {
+//            arr3.add(a.get(i));
+//        }
+//        for (int i = a.size(); i < b.size()+a.size(); i++) {
+//            arr3.add(b.get(i-a.size()));
+//        }
+
+
+
 
 
         return arr3;

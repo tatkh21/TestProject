@@ -6,7 +6,7 @@ package office_hours.practice_06_28_2021;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class Facebook extends SocialMedia implements Groups{
+public class FacebookUser extends SocialMedia implements Groups{
     private String username;
     private String password;
     private String fullName;
@@ -19,18 +19,18 @@ public class Facebook extends SocialMedia implements Groups{
     static {
         platform = "Facebook";
     }
-    public Facebook (String username, String password) {
+    public FacebookUser(String username, String password) {
         this.username = username;
         setPassword(password);
         personURL = "Facebook.com/" + username;
         allPosts = new ArrayList<>();
         allPosts = new ArrayList<>();
     }
-    public Facebook (String username, String password, String fullName) {
+    public FacebookUser(String username, String password, String fullName) {
         this(username,password);
         setFullName(fullName);
     }
-    public Facebook(String username, String password, String fullName,int age, int numberOfFriends ) {
+    public FacebookUser(String username, String password, String fullName, int age, int numberOfFriends ) {
 
     }
 
@@ -98,7 +98,7 @@ public class Facebook extends SocialMedia implements Groups{
 
     @Override
     public void directMessage(String username, String message) {
-        System.out.println();
+        System.out.println(message + " was sent to " + username);
 
     }
 
@@ -107,7 +107,7 @@ public class Facebook extends SocialMedia implements Groups{
         allPosts.add(new Post (body));
 
     }
-    public boolean sendFriendRequest (Facebook other) {
+    public boolean sendFriendRequest (FacebookUser other) {
         boolean sent = false;
         if (this.getNumberOfFriends() < 5000 && other.getNumberOfFriends() < 5000) {
             System.out.println("Friend request sent to " + other.getUsername());

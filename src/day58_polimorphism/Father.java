@@ -12,4 +12,9 @@ public class Father {
     public void playWithKid() {
         System.out.println("Father is playing his kid");
     }
+
+    @Override
+    public String toString() {
+        return "Father{}";
+    }
 }

@@ -11,4 +11,9 @@ public class SuperMan extends Father implements Worker{
         System.out.println("Superman is getting paid");
         return 8000;
     }
+
+    @Override
+    public String toString() {
+        return "SuperMan{}";
+    }
 }

@@ -1,5 +1,7 @@
 package day58_polimorphism;
 
+import java.util.ArrayList;
+
 public class SuperManTest {
     public static void main(String[] args) {
         Father spMan1 = new SuperMan();
@@ -19,5 +21,12 @@ public class SuperManTest {
         spMan3.feedKid();
         spMan3.playWithKid();
         spMan3.raiseKid();
+
+        ArrayList<Father> fathers = new ArrayList<>();
+        fathers.add(spMan1);
+        fathers.add((SuperMan)spMan2);
+        fathers.add(spMan3);
+        System.out.println(spMan1.toString());
+        System.out.println(fathers.get(0).toString());
         }
 }
